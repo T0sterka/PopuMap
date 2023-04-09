@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./nain.css">
+    <title>PopuMap</title>
+</head>
+<body>
+    <a class="button1" href="main.html">Назад</a>
+    <body style="background-color: #91ccff"></body>
+    <H1 class="text">Введите данные для расчёта примерного количества реальных жителей</H1>
+</header>
+<p class="txt">Введите потребление горячей воды (в кубах)</p>>>
+<input type="text" class="i-1">
+
+<p class="txt">Введите потребление холодной воды (в кубах)</p>>>
+<input type="text" class="i-2">
+
+<p class="txt">Введите количество официально прописанных людей потребление енергии (кВТ)</p>>>
+<input type="text" class="i-3">
+
+<p class="txt">Введите количество официально прописанных людей</p>>>
+<input type="text" class="i-4">
+
+<a href="#" class="button btn">Говото</a>
+<script>    
+let btn = document.querySelector(".button");
+
+let sde = 36;
+let sdvg = 1;
+let sdvh = 1.5;
+btn.onclick = function(){
+    let pvg = document.querySelector(".i-1").value;
+    let pvh = document.querySelector(".i-2").value;
+    let op = document.querySelector(".i-3").value;
+    let pe = document.querySelector(".i-4").value;
+    pvgRound = Math.round(pvg);
+    let b = pvh/1.5;
+    let c = pe / sde;
+    let d = pvgRound + b + c;
+    let np = d/3
+    let np1 = Math.round(np);
+    alert("Примерное количество реально проживающих = " + np1)
+
+}
+</script>
+</body>
+</html>
